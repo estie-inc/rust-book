@@ -37,13 +37,38 @@ async fn todo(pool: web::Data<SqlitePool>) -> HttpResponse {
 
 #[derive(serde::Deserialize)]
 struct Task {
-    id: String,
+    id: Option<String>,
+    task: Option<String>,
 }
 
 #[post("/update")]
 async fn update(pool: web::Data<SqlitePool>, form: web::Form<Task>) -> HttpResponse {
     let task = form.into_inner();
-    panic!("{}", task.id);
+
+    match task.id {
+        Some(id) => {
+            sqlx::query("DELETE FROM tasks WHERE task = ?")
+                .bind(id)
+                .execute(pool.as_ref())
+                .await
+                .unwrap();
+        }
+        None => {}
+    }
+    match task.task {
+        Some(task) if task != "" => {
+            sqlx::query("INSERT INTO tasks (task) VALUES (?)")
+                .bind(task)
+                .execute(pool.as_ref())
+                .await
+                .unwrap();
+        }
+        _ => {}
+    }
+
+    HttpResponse::Found()
+        .append_header(("Location", "/"))
+        .finish()
 }
 
 #[actix_web::main]
