@@ -1,3 +1,8 @@
 [workspace]
-members = ["chapter10", "chapter2", "chapter8"]
+members = [
+    "chapter10",
+    "chapter2",
+    "chapter8",
+    "chapter3/arithmetic-operations-quiz",
+]
 resolver = "2"
