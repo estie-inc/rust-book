@@ -1,6 +1,7 @@
 [workspace]
 members = [
     "chapter2",
+    "chapter3/arithmetic-operations-quiz",
     "chapter5/chapter5-2",
     "chapter5/chapter5-3",
     "chapter5/chapter5-4",
