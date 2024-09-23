@@ -521,6 +521,22 @@ name = "chapter2"
 version = "0.1.0"
 
 [[package]]
+name = "chapter5-2"
+version = "0.1.0"
+
+[[package]]
+name = "chapter5-3"
+version = "0.1.0"
+
+[[package]]
+name = "chapter5-4"
+version = "0.1.0"
+
+[[package]]
+name = "chapter5-5"
+version = "0.1.0"
+
+[[package]]
 name = "chapter8"
 version = "0.1.0"
 dependencies = [

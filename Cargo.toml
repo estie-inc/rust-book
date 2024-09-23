@@ -1,3 +1,11 @@
 [workspace]
-members = ["chapter10", "chapter2", "chapter8"]
+members = [
+    "chapter2",
+    "chapter5/chapter5-2",
+    "chapter5/chapter5-3",
+    "chapter5/chapter5-4",
+    "chapter5/chapter5-5",
+    "chapter8",
+    "chapter10",
+]
 resolver = "2"
