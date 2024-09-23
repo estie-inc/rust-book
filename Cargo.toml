@@ -4,5 +4,6 @@ members = [
     "chapter2",
     "chapter8",
     "chapter3/arithmetic-operations-quiz",
+    "chapter6",
 ]
 resolver = "2"
