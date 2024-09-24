@@ -1,6 +1,6 @@
 [workspace]
 members = [
-    "chapter2",
+    "chapter2/hello_world",
     "chapter3/arithmetic-operations-quiz",
     "chapter5/chapter5-2",
     "chapter5/chapter5-3",
@@ -12,6 +12,6 @@ members = [
     "chapter12/chapter12-parallel-add",
     "chapter12/chapter12-parallel-thumbnail",
     "chapter12/chapter12-channel",
-    "chapter12/chapter12-rayon",
+    "chapter12/chapter12-rayon", "chapter2/hello_world",
 ]
 resolver = "2"
