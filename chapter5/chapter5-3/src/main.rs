@@ -24,9 +24,9 @@ fn main() {
         }
 
         // 式の計算
-        let left: f64 = eval_token(&tokens[0], memory);
-        let right: f64 = eval_token(&tokens[2], memory);
-        let result = eval_expression(left, &tokens[1], right);
+        let left: f64 = eval_token(tokens[0], memory);
+        let right: f64 = eval_token(tokens[2], memory);
+        let result = eval_expression(left, tokens[1], right);
 
         // 結果の表示
         print_output(result);

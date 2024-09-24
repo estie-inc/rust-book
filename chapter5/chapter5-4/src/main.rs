@@ -20,19 +20,19 @@ fn main() {
         // メモリへの書き込み
         let is_memory = tokens[0].starts_with("mem");
         if is_memory && tokens[0].ends_with('+') {
-            let result = memory.add(&tokens[0], prev_result);
+            let result = memory.add(tokens[0], prev_result);
             print_output(result);
             continue;
         } else if is_memory && tokens[0].ends_with('-') {
-            let result = memory.add(&tokens[0], -prev_result);
+            let result = memory.add(tokens[0], -prev_result);
             print_output(result);
             continue;
         }
 
         // 式の計算
-        let left: f64 = eval_token(&tokens[0], &memory);
-        let right: f64 = eval_token(&tokens[2], &memory);
-        let result = eval_expression(left, &tokens[1], right);
+        let left: f64 = eval_token(tokens[0], &memory);
+        let right: f64 = eval_token(tokens[2], &memory);
+        let result = eval_expression(left, tokens[1], right);
         match tokens[1] {
             "+" => left + right,
             "-" => left - right,
