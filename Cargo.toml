@@ -9,12 +9,13 @@ members = [
     "chapter7/my_package",
     "chapter7/my_library",
     "chapter7/another_bin",
+    "chapter7/use_remote_crate",
     "chapter8",
     "chapter10",
     "chapter12/chapter12-sync",
     "chapter12/chapter12-parallel-add",
     "chapter12/chapter12-parallel-thumbnail",
     "chapter12/chapter12-channel",
-    "chapter12/chapter12-rayon", "chapter2/hello_world", "chapter7/my_package", "chapter7/my_library", "chapter7/another_bin",
+    "chapter12/chapter12-rayon",
 ]
 resolver = "2"
