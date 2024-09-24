@@ -16,9 +16,13 @@ struct App {
 enum Command {
     /// 新しい口座を作る
     New(NewArgs),
+    /// 口座に入金する
     Deposit(DepositArgs),
+    /// 口座から出金する
     Withdraw(WithdrawArgs),
+    /// CSV からインポートする
     Import(ImportArgs),
+    /// レポートを出力する
     Report(ReportArgs),
 }
 
@@ -29,8 +33,9 @@ struct NewArgs {
 
 impl NewArgs {
     fn run(&self) {
-        let mut writer = Writer::from_path(format!("{}.csv", self.account_name)).unwrap();
-        writer.write_record(&["日付", "用途", "金額"]).unwrap();
+        let file_name = format!("{}.csv", self.account_name);
+        let mut writer = Writer::from_path(file_name).unwrap();
+        writer.write_record(["日付", "用途", "金額"]).unwrap();
         writer.flush().unwrap();
     }
 }
@@ -82,7 +87,7 @@ impl WithdrawArgs {
             .write_record(&[
                 self.date.format("%Y-%m-%d").to_string(),
                 self.usage.to_string(),
-                format!("-{}", self.amount.to_string()),
+                format!("-{}", self.amount),
             ])
             .unwrap();
     }
@@ -104,7 +109,7 @@ impl ImportArgs {
         let mut writer = WriterBuilder::new()
             .has_headers(false)
             .from_writer(open_option);
-        let mut reader = Reader::from_path(self.src_file_name.to_string()).unwrap();
+        let mut reader = Reader::from_path(&self.src_file_name).unwrap();
         for result in reader.deserialize() {
             let record: Record = result.unwrap();
             writer.serialize(record).unwrap();

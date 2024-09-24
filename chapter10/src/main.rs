@@ -45,18 +45,15 @@ struct Task {
 async fn update(pool: web::Data<SqlitePool>, form: web::Form<Task>) -> HttpResponse {
     let task = form.into_inner();
 
-    match task.id {
-        Some(id) => {
-            sqlx::query("DELETE FROM tasks WHERE task = ?")
-                .bind(id)
-                .execute(pool.as_ref())
-                .await
-                .unwrap();
-        }
-        None => {}
+    if let Some(id) = task.id {
+        sqlx::query("DELETE FROM tasks WHERE task = ?")
+            .bind(id)
+            .execute(pool.as_ref())
+            .await
+            .unwrap();
     }
     match task.task {
-        Some(task) if task != "" => {
+        Some(task) if !task.is_empty() => {
             sqlx::query("INSERT INTO tasks (task) VALUES (?)")
                 .bind(task)
                 .execute(pool.as_ref())
