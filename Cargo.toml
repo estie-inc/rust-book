@@ -6,12 +6,13 @@ members = [
     "chapter5/chapter5-3",
     "chapter5/chapter5-4",
     "chapter5/chapter5-5",
+    "chapter6",
     "chapter8",
     "chapter10",
     "chapter12/chapter12-sync",
     "chapter12/chapter12-parallel-add",
     "chapter12/chapter12-parallel-thumbnail",
     "chapter12/chapter12-channel",
-    "chapter12/chapter12-rayon", "chapter2/hello_world",
+    "chapter12/chapter12-rayon",
 ]
 resolver = "2"
