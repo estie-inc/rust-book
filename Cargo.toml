@@ -12,6 +12,7 @@ members = [
     "chapter7/another_bin",
     "chapter7/use_remote_crate",
     "chapter8",
+    "chapter9",
     "chapter10",
     "chapter12/chapter12-sync",
     "chapter12/chapter12-parallel-add",

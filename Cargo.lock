@@ -701,6 +701,18 @@ dependencies = [
 ]
 
 [[package]]
+name = "chapter9"
+version = "0.1.0"
+dependencies = [
+ "chrono",
+ "clap",
+ "rstest",
+ "serde",
+ "serde_json",
+ "thiserror",
+]
+
+[[package]]
 name = "chrono"
 version = "0.4.38"
 source = "registry+https://github.com/rust-lang/crates.io-index"
