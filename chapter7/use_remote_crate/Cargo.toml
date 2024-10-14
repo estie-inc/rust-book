@@ -4,3 +4,4 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+my_library = {git="ssh://git@github.com/estie-inc/rust-book.git", package = "my_library"}
