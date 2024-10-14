@@ -7,6 +7,12 @@ pub struct Bookshelf {
     matcher: SkimMatcherV2,
 }
 
+impl Default for Bookshelf {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
 impl Bookshelf {
     pub fn new() -> Self {
         let matcher = SkimMatcherV2::default();

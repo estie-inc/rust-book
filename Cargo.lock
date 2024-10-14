@@ -274,7 +274,7 @@ dependencies = [
 name = "another_bin"
 version = "0.1.0"
 dependencies = [
- "my_library",
+ "my_library 0.1.0",
 ]
 
 [[package]]
@@ -1725,6 +1725,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "my_library"
+version = "0.1.0"
+source = "git+ssh://git@github.com/estie-inc/rust-book.git#eb15cf36c4948e59ff937ac3150a611def396f08"
+dependencies = [
+ "fuzzy-matcher",
+]
+
+[[package]]
 name = "my_package"
 version = "0.1.0"
 
@@ -2987,6 +2995,9 @@ checksum = "daf8dba3b7eb870caf1ddeed7bc9d2a049f3cfdfae7cb521b087cc33ae4c49da"
 [[package]]
 name = "use_remote_crate"
 version = "0.1.0"
+dependencies = [
+ "my_library 0.1.0 (git+ssh://git@github.com/estie-inc/rust-book.git)",
+]
 
 [[package]]
 name = "utf8parse"
