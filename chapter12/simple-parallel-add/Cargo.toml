@@ -1,5 +1,5 @@
 [package]
-name = "chapter12-parallel-add"
+name = "simple-parallel-add"
 version = "0.1.0"
 edition = "2021"
 

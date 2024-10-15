@@ -1,5 +1,5 @@
 [package]
-name = "chapter12-sync"
+name = "thumbnailer-sync"
 version = "0.1.0"
 edition = "2021"
 

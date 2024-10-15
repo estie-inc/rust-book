@@ -1,5 +1,5 @@
 [package]
-name = "chapter12-channel"
+name = "thumbnailer-parallel-thumbnail"
 version = "0.1.0"
 edition = "2021"
 
