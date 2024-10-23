@@ -1,0 +1,10 @@
+- chapter12-sync
+  - section 12-1 の、非並列版のサムネイル作成ツールです
+- chapter12-parallel-add
+  - section 12-2 の、1を10億回足すサンプルです
+- chapter12-parallel-thumbnail
+  - section 12-3 の、シンプルに並列化したサムネイル作成ツールです
+- chapter12-channel
+  - section 12-3 の、チャンネルを使ったサムネイル作成ツールです
+- chapter12-rayon
+  - section 12-3 の、rayonを使ったサムネイル作成ツールです
