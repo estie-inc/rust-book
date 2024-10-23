@@ -1,0 +1,9 @@
+[package]
+name = "thumbnailer-rayon"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4.5.18", features = ["derive"] }
+image = "0.25.2"
+rayon = "1.10.0"

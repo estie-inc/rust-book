@@ -1,0 +1,12 @@
+[package]
+name = "chapter10"
+version = "0.1.0"
+edition = "2021"
+
+
+[dependencies]
+actix-web = "4"
+askama = "0.12"
+askama_actix = "0.14"
+serde = { version = "1.0", features = ["derive"] }
+sqlx = { version = "0.7.3", features = ["sqlite", "runtime-tokio"] }

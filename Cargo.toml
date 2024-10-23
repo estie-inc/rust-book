@@ -1,0 +1,27 @@
+[workspace]
+members = [
+    "chapter2/hello_world",
+    "chapter3",
+    "chapter4",
+    "chapter5/calculator-5-2",
+    "chapter5/calculator-5-3",
+    "chapter5/calculator-5-4",
+    "chapter5/calculator-5-5",
+    "chapter6",
+    "chapter7/my_package",
+    "chapter7/my_library",
+    "chapter7/another_bin",
+    "chapter7/use_remote_crate",
+    "chapter8",
+    "chapter9",
+    "chapter10",
+    "chapter11",
+    "chapter12/thumbnailer-sync",
+    "chapter12/simple-parallel-add",
+    "chapter12/thumbnailer-parallel-thumbnail",
+    "chapter12/thumbnailer-channel",
+    "chapter12/thumbnailer-rayon",
+    "chapter13/merge-array",
+    "chapter13/parenthesis",
+]
+resolver = "2"
