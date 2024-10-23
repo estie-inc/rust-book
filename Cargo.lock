@@ -1701,7 +1701,7 @@ dependencies = [
 [[package]]
 name = "my_library"
 version = "0.1.0"
-source = "git+https://github.com/estie-inc/rust-book?branch=main#3e782d3e67d7157c9cf3684786f0871296834db9"
+source = "git+https://github.com/estie-inc/rust-book?branch=main#e0d2c4a23a0ad5c050c89daaac7248e0b75bbfdf"
 dependencies = [
  "fuzzy-matcher",
 ]
